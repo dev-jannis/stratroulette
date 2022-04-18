@@ -101,7 +101,20 @@
 
       .options {
         margin-top: 10px;
-        visibility: hidden;
+        visibility: visible;
+      }
+
+      .mapOptions {
+        margin-top: 10px;
+        vertical-align: middle;
+      }
+
+      select {
+        align-self: center;
+        text-align: center;
+        font-size: 40pt;
+        margin-bottom: 50px;
+        border-radius: 10px;
       }
     </style>
   </head>
@@ -120,6 +133,18 @@
         <button onclick="setMode(false)" id="defenderButton" type="button">
           Defender
         </button>
+      </div>
+      <div class="mapOptions">
+        <select onchange="setMap()" name="mapPickSelector" id="mapPickID">
+          <option value="none">No map</option>
+          <option value="haven">Haven</option>
+          <option value="split">Split</option>
+          <option value="fracture">Fracture</option>
+          <option value="bind">Bind</option>
+          <option value="breeze">Breeze</option>
+          <option value="icebox">Icebox</option>
+          <option value="ascent">Ascent</option>
+        </select>
       </div>
     </center>
   </body>
